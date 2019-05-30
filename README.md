@@ -35,8 +35,8 @@
 
 <a id="chapter-2"></a>
 ## Схемы
-![SCHEME](https://github.com/AlexGyver/GyverRGB/blob/master/schemes/scheme0.jpg)
 ![SCHEME](https://github.com/AlexGyver/GyverRGB/blob/master/schemes/scheme1.jpg)
+![SCHEME](https://github.com/AlexGyver/GyverRGB/blob/master/schemes/scheme2.jpg)
 
 <a id="chapter-3"></a>
 ## Материалы и компоненты
