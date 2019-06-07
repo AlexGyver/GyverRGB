@@ -59,6 +59,11 @@
 #define R1 10010            // точное значение 10 кОм
 #define R2 4700             // точное значение 4.7 кОм
 
+// --------- Цвет ---------
+#define LUT_R 1.0           // коэффициент LUT матрицы красного цвета (0.0 - 1.0)
+#define LUT_G 1.0           // коэффициент LUT матрицы зелёного цвета (0.0 - 1.0)
+#define LUT_B 1.0           // коэффициент LUT матрицы синего цвета (0.0 - 1.0)
+
 // ================ ДЛЯ РАЗРАБОТЧИКОВ ================
 // ----------- ПИНЫ -----------
 // пин вольтметра
@@ -249,10 +254,9 @@ void setup() {
     strip.highFrequency(PWM_FREQUENCY);
   }
 
-  if (MAX_CURRENT > 0) {
-    strip.setMaxCurrent(NUM_LEDS, 12000, MAX_CURRENT);
-  }
+  if (MAX_CURRENT > 0) strip.setMaxCurrent(NUM_LEDS, 12000, MAX_CURRENT);
   if (DRIVER_DIRECTION) strip.setDirection(REVERSE);
+  if (LUT_R != 1.0 || LUT_G != 0 || LUT_B != 0) strip.setLUT(LUT_R, LUT_G, LUT_B);
 
   if (ENC_TYPE) enc.setType(TYPE2);
   if (ENC_REVERSE) enc.setDirection(REVERSE);

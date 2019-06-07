@@ -66,6 +66,7 @@
 Питание
 - БП 12V (1.5A на каждые 100 диодов) http://ali.ski/sH-LK  http://ali.ski/8F7bYh
 - Гнездо 5.5x2.1 http://ali.ski/N2Jcu  http://ali.ski/E-IuH
+- Гнездо на плату http://ali.ski/w8XjNT  http://ali.ski/jBUFoX
 - Выключатель 16мм http://ali.ski/URbeu  http://ali.ski/ITiXr
 
 Автономное питание
