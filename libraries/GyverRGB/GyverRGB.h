@@ -22,14 +22,16 @@
 	- Возможность управления 6-ю RGB диодами/лентами с одной Arduino (только для ATmega328)
 		(встроенный генератор ШИМ на ВСЕХ 20 пинах atmega328)
 		
-	Версия 1.12 от 26.05.2019
+	Версия 1.13 от 08.06.2019
 	- Добавлен режим с настройкой частоты ШИМ
 	- Добавлена матрица коррекции LUT
+	- Добавлено коррекция по минимальному сигналу ШИМ
+	- Добавлена гамма-коррекция яркости
 */
 
 class GRGB
 {
-  public:
+  public:  
 	GRGB(uint8_t rpin, uint8_t gpin, uint8_t bpin);						// объявление
 	
 	GRGB(uint8_t rpin, uint8_t gpin, uint8_t bpin, boolean pwmmode);	// объявление с выбором режима генерации ШИМ (NORM_PWM / ANY_PWM)
@@ -48,6 +50,8 @@ class GRGB
 																	// максимальный ток
 																	
 	void setBrightness(byte bright);					// установка яркости (0-255)
+	void setGammaBright(boolean val);					// вкл/выкл коррекции яркости
+	void setMinPWM(byte val);							// минимальный сигнал PWM
 	void setLUT(float rc, float gc, float bc);			// установка коррекции цвета (матрица LUT)
 	void constantBrightTick(int minVolts, int vcc);		// корректировка под напряжение питания
 	void gammaTick(int vcc);							// корректировка красного цвета при падении напряжения питания
@@ -82,6 +86,9 @@ class GRGB
 	boolean _gammaFlag;
 	boolean _highFreqFlag = false;
 	boolean _LUTflag = false;
+	boolean _minPWMflag = false;
+	boolean _gammaBright = false;
+	byte _minPWMval;
 	float _rc = 1.0, _gc = 1.0, _bc = 1.0;
 	float _gammaR = 1.0;
 	float _gammaG = 1.0;
