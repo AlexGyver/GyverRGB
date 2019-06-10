@@ -18,15 +18,22 @@
   - Режим ограничения тока (расчёт на основе яркости)
   - Измерение напряжения питания и вывод в % или вольтах
   - Режим поддержания яркости по мере разрядки АКБ
-  
+
   1.1
   - Добавлена настройка MIN_PWM
   - Добавлена коррекция гаммы, настройка GAMMA_BRIGHT
   - Если ругается - установи библиотеку GyverRGB из архива, она тоже обновилась!
+
+  1.2
+  - Добавлено управление кнопкой:
+    - Клик: вкл/выкл
+    - Двойной клик: смена пресета
+    - Удержание: яркость
 */
 
 // ================ НАСТРОЙКИ ================
 // ------ Дисплей ------
+#define USE_OLED 0          // 1 - использовать дисплей, 0 - нет
 #define LCD_BACKL 1         // автоотключение подсветки дисплея (1 - разрешить) 
 #define BACKL_TOUT 60       // таймаут неактивности отключения дисплея, секунды
 #define CONTRAST 150        // контрастность (яркость) дисплея 0-255
@@ -55,6 +62,9 @@
 #define USE_ENC 0           // 1 - использовать энкодер, 0 - нет
 #define ENC_REVERSE 1       // 1 - инвертировать направление энкодера
 #define ENC_TYPE 1          // 0 или 1 - тип энкодера
+
+// ------ Кнопка -------
+#define USE_BTN 1           // 1 - использовать кнопку, 0 - нет
 
 // ------ Напряжение ------
 #define VOLTMETER 1         // 0 или 1 - вкл/выкл вольтметр (делитель напряжения в пин А0)
@@ -149,10 +159,17 @@ GRGB strip(PIN_R, PIN_G, PIN_B);  // куда подключены цвета (R
 #include <GyverEncoder.h>
 Encoder enc(CLK, DT, SW);
 
+#if (USE_OLED == 1)
 #include <Wire.h>
 #include <SSD1306Ascii.h>
 #include <SSD1306AsciiWire.h>
 SSD1306AsciiWire oled;
+#endif
+
+#if (USE_BTN == 1)
+#include <GyverButton.h>
+GButton btn(12);
+#endif
 
 #include <IRLremote.h>
 CHashIR IRLremote;
@@ -240,11 +257,15 @@ boolean backlState = true;
 uint32_t backlTimer;
 
 void setup() {
-  //Serial.begin(9600);
+  Serial.begin(9600);
   if (USE_BT) btSerial.begin(9600);
   if (USE_IR) IRLremote.begin(pinIR);
   randomSeed(analogRead(1));
   voltmeterTimer = millis() - 3000;
+
+#if (USE_BTN == 1)
+  btn.setStepTimeout(200);
+#endif
 
   // ------ ЛЕНТА -------
   // выставляем режим и частоту ШИМ
@@ -287,6 +308,7 @@ void setup() {
   readSettings();
   delay(100);
 
+#if (USE_OLED == 1)
   Wire.begin();
   Wire.setClock(400000L);
   oled.begin(&Adafruit128x32, I2C_ADDRESS);
@@ -307,6 +329,7 @@ void setup() {
   //Stang5x7
   //System5x7
   //SystemFont5x7
+#endif
 
   settingsChanged = true;
   drawInfo();
@@ -322,10 +345,12 @@ void loop() {
 }
 
 void backlTick() {
+#if (USE_OLED == 1)
   if (LCD_BACKL && backlState && millis() - backlTimer >= (long)BACKL_TOUT * 1000) {
     backlState = false;
     oled.clear();
   }
+#endif
 }
 void backlOn() {
   backlState = true;
@@ -363,8 +388,10 @@ void voltmeterTick() {
 }
 
 void drawBattery() {
-  // перевод в проценты для трёх банок лития
+  // перевод в проценты для трёх банок лития  
   batPerc = mVtoPerc(voltage, 12600, 11850, 11550, 11250, 11100, 8400);
+  
+#if (USE_OLED == 1)
   if (CHARGE_VAL) {
     float thisVoltage = (float)voltage / 1000;
     oled.setCursor(90, 0);
@@ -379,6 +406,7 @@ void drawBattery() {
     oled.print(batPerc);
     oled.print("%");
   }
+#endif
 }
 
 byte mVtoPerc(int volts, int volt100, int volt80, int volt60, int volt40, int volt20, int volt0) {
