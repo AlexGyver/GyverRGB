@@ -54,6 +54,7 @@ void bluetoothTick() {
         navPos = 2;
         invFlag = true;
         drawSettings();
+        changeFlag = true;
         break;
       case 3:   // смена пресета
         changePresetTo(intData[1]);
