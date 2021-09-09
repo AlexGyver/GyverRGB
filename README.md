@@ -39,42 +39,6 @@
 ![SCHEME](https://github.com/AlexGyver/GyverRGB/blob/master/schemes/scheme2.jpg)
 
 <a id="chapter-3"></a>
-## Материалы и компоненты
-### Ссылки оставлены на магазины, с которых я закупаюсь уже не один год
-Первые ссылки - в основном магазин Great Wall, вторые - WAVGAT. Покупая в одном магазине, вы экономите на доставке!
-Мосфеты и резисторы можно купить в любом магазине электронных компонентов (ChipDip итд)
-- Arduino NANO 328p http://ali.ski/NnlNQX  http://ali.ski/zwCA_k
-- Лента Али RGB 120 http://ali.ski/vbMJ7  http://ali.ski/oHXeDW
-- Лента Giant4 https://giant4.ru/5050-120.html
-
-Управление
-- Bluetooth HC-06 DIP http://ali.ski/qcC8Xo  http://ali.ski/rGBts
-- Энкодер http://ali.ski/4TcMG  http://ali.ski/fIeHL
-- ИК пульт http://ali.ski/1u1fy5  http://ali.ski/h1oI-j
-- ИК приёмники отдельные http://ali.ski/Qomrz  http://ali.ski/t_tqp
-- Дисплей http://ali.ski/_pBdKB  http://ali.ski/rhpHx
-
-Драйвер
-- LED amplifier http://ali.ski/5hBBA  http://ali.ski/ZnPmT  http://ali.ski/11pPxQ
-- MOSFET IRF3205 (10 шт) http://ali.ski/916JVj  http://ali.ski/X9lHRB
-- Резисторы (100R и 10k) http://ali.ski/Q7u9s  http://ali.ski/-zewE2
-
-Прочее
-- Макетная плата http://ali.ski/8mM5R
-- Трубы http://energoplast.ru/
-
-Питание
-- БП 12V (1.5A на каждые 100 диодов) http://ali.ski/sH-LK  http://ali.ski/8F7bYh
-- Гнездо 5.5x2.1 http://ali.ski/N2Jcu  http://ali.ski/E-IuH
-- Гнездо на плату http://ali.ski/w8XjNT  http://ali.ski/jBUFoX
-- Выключатель 16мм http://ali.ski/URbeu  http://ali.ski/ITiXr
-
-Автономное питание
-- Аккумуляторы http://ali.ski/Vz_ok6  http://ali.ski/aK7GZ
-- Батарейный отсек http://ali.ski/OhZYAF  http://ali.ski/T-OfU  http://ali.ski/te6tDS
-- BMS 3S баланс http://ali.ski/ZiDFV_  http://ali.ski/Savjz
-- Вольтметр - резисторы 10k и 4.7k http://ali.ski/Q7u9s  http://ali.ski/-zewE2
-
 ## Вам скорее всего пригодится
 * [Всё для пайки (паяльники и примочки)](http://alexgyver.ru/all-for-soldering/)
 * [Недорогие инструменты](http://alexgyver.ru/my_instruments/)
