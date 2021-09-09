@@ -43,37 +43,37 @@
 ### Ссылки оставлены на магазины, с которых я закупаюсь уже не один год
 Первые ссылки - в основном магазин Great Wall, вторые - WAVGAT. Покупая в одном магазине, вы экономите на доставке!
 Мосфеты и резисторы можно купить в любом магазине электронных компонентов (ChipDip итд)
-- Arduino NANO 328p http://ali.ski/NnlNQX  http://ali.ski/zwCA_k
-- Лента Али RGB 120 http://ali.ski/vbMJ7  http://ali.ski/oHXeDW
+- Arduino NANO 328p https://ali.ski/v47nz5  https://ali.ski/uKLTxu
+- Лента Али RGB 120 https://ali.ski/sZYUse  https://ali.ski/QCakdN
 - Лента Giant4 https://giant4.ru/5050-120.html
 
 Управление
-- Bluetooth HC-06 DIP http://ali.ski/qcC8Xo  http://ali.ski/rGBts
-- Энкодер http://ali.ski/4TcMG  http://ali.ski/fIeHL
-- ИК пульт http://ali.ski/1u1fy5  http://ali.ski/h1oI-j
-- ИК приёмники отдельные http://ali.ski/Qomrz  http://ali.ski/t_tqp
-- Дисплей http://ali.ski/_pBdKB  http://ali.ski/rhpHx
+- Bluetooth HC-06 DIP https://ali.ski/TiJ7J  https://ali.ski/GdIZlM
+- Энкодер https://ali.ski/mimIQ  https://ali.ski/7Dq9v
+- ИК пульт https://ali.ski/y7ifZ  https://ali.ski/CBL0BY
+- ИК приёмники отдельные https://ali.ski/7l8um  https://ali.ski/EhTsq
+- Дисплей https://ali.ski/BjGHEP  https://ali.ski/SnNe9
 
 Драйвер
-- LED amplifier http://ali.ski/5hBBA  http://ali.ski/ZnPmT  http://ali.ski/11pPxQ
-- MOSFET IRF3205 (10 шт) http://ali.ski/916JVj  http://ali.ski/X9lHRB
-- Резисторы (100R и 10k) http://ali.ski/Q7u9s  http://ali.ski/-zewE2
+- LED amplifier https://ali.ski/M336P  https://ali.ski/4MB-u5  https://ali.ski/GEz-7T
+- MOSFET IRF3205 (10 шт) https://ali.ski/BY7Hg  https://ali.ski/icUjJZ
+- Резисторы (100R и 10k) https://ali.ski/DIk1pS  https://ali.ski/L2Cik4
 
 Прочее
-- Макетная плата http://ali.ski/8mM5R
+- Макетная плата https://ali.ski/d9D7M
 - Трубы http://energoplast.ru/
 
 Питание
-- БП 12V (1.5A на каждые 100 диодов) http://ali.ski/sH-LK  http://ali.ski/8F7bYh
-- Гнездо 5.5x2.1 http://ali.ski/N2Jcu  http://ali.ski/E-IuH
-- Гнездо на плату http://ali.ski/w8XjNT  http://ali.ski/jBUFoX
-- Выключатель 16мм http://ali.ski/URbeu  http://ali.ski/ITiXr
+- БП 12V (1.5A на каждые 100 диодов) https://ali.ski/iBEE7f  https://ali.ski/FtBcl
+- Гнездо 5.5x2.1 https://ali.ski/zouaE  https://ali.ski/Xa9DM
+- Гнездо на плату https://ali.ski/n9Ncpx  https://ali.ski/XXMPh3
+- Выключатель 16мм https://ali.ski/ZXK9GL  https://ali.ski/NVyxV
 
 Автономное питание
-- Аккумуляторы http://ali.ski/Vz_ok6  http://ali.ski/aK7GZ
-- Батарейный отсек http://ali.ski/OhZYAF  http://ali.ski/T-OfU  http://ali.ski/te6tDS
-- BMS 3S баланс http://ali.ski/ZiDFV_  http://ali.ski/Savjz
-- Вольтметр - резисторы 10k и 4.7k http://ali.ski/Q7u9s  http://ali.ski/-zewE2
+- Аккумуляторы https://ali.ski/4zw95s  https://ali.ski/vzROL6
+- Батарейный отсек https://ali.ski/DggxO  https://ali.ski/-4xY62  https://ali.ski/If4-Z
+- BMS 3S баланс https://ali.ski/2RgKJ  https://ali.ski/0vX3L
+- Вольтметр - резисторы 10k и 4.7k https://ali.ski/DIk1pS  https://ali.ski/L2Cik4
 
 ## Вам скорее всего пригодится
 * [Всё для пайки (паяльники и примочки)](http://alexgyver.ru/all-for-soldering/)
